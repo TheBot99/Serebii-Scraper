@@ -1,0 +1,33 @@
+{
+    "Base_URL": "https://www.serebii.net/URL_id/DexNumber.shtml",
+    
+    "Generations": {
+        "Scarlet-Violet" : {
+            "URL_id": "pokedex-sv"
+        },
+        "Sword-Shield" : {
+            "URL_id": "pokedex-swsh"
+        },
+        "Sun-Moon" : {
+            "URL_id": "pokedex-sm"
+        },
+        "X-Y" : {
+            "URL_id": "pokedex-xy"
+        },
+        "Black-White" : {
+            "URL_id": "pokedex-bw"
+        },
+        "Diamond-Pearl" : {
+            "URL_id": "pokedex-dp"
+        },
+        "Ruby-Sapphire" : {
+            "URL_id": "pokedex-rs"
+        },
+        "Gold-Silver" : {
+            "URL_id": "pokedex-gs"
+        },
+        "Red-Blue" : {
+            "URL_id": "pokedex"
+        }
+    }
+}
