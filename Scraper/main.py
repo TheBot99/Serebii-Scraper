@@ -6,7 +6,7 @@ from DataScrapers import *
 
 DexNumber = 18
 Generation = 0
-while DexNumber <= 151:
+while DexNumber <= 1017:
     Generations_Pokemon_In = json.load(open("Generations_Pokemon_In.json", "r+"))
     DexNumberString = Convert_DexNumber_To_3_Digits(DexNumber)
     NumberOfGenerationsPokemonIn = len(Generations_Pokemon_In[DexNumberString])
