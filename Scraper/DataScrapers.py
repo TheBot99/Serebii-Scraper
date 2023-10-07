@@ -36,16 +36,14 @@ def Get_Pokemon_Type_From_Soup(Soup, GenerationName):
     All_Types = ["Fire", "Water", "Grass", "Electric", "Ice", "Fighting", "Poison", "Ground",
                  "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy", "Normal"]
     Pokemon_Type = []
-    GenerationNameAbbreviations = {"Scarlet-Violet": "-sv", "Sword-Shield": "-swsh", "Sun-Moon": "-sm", "X-Y": "-xy",
-                                   "Black-White": "-bw", "Diamond-Pearl": "-dp",  "Ruby-Sapphire": "-rs",  "Gold-Silver": "-gs", "Red-Blue": ""}
-    for Type in All_Types:
-        if Soup.find("a", href=f"/pokedex{GenerationNameAbbreviations[GenerationName]}/{Type.lower()}.shtml"):
-            # print(f"/pokedex{GenerationNameAbbreviations[GenerationName]}/{Type.lower()}.shtml")
-            if len(Pokemon_Type) < 2:
-                Pokemon_Type.append(Type)
-
-    return Pokemon_Type
+    
 
 
-def Check_If_Pokemon_Has_Forms():
-    pass
+def Check_If_Pokemon_Has_Forms(DexNumberString):
+    soup = Get_Soup_From_File(f"Serebii/{DexNumberString}/No_Gen.html")
+    FindAlternateFormTitle = soup.find("td", string="Alternate Forms")
+    print(FindAlternateFormTitle)
+    print(soup)
+
+Check_If_Pokemon_Has_Forms("019")
+
